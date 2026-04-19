@@ -21,10 +21,10 @@
 // | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp Q                &kp W          &kp E              &kp R 			 &kp T   &kp Z  &kp U  			   &kp I     	       	&kp O   	               &kp P    		       
+   &kp Q                &kp W          &kp E              &kp R 			 &kp T   &kp Z  &kp U  			   &kp I     	       	&kp O   	               &kp P
    &mt LGUI A   &mt LALT S   &mt LCTRL D  &mt LSHFT F  &kp G           &kp H        &mt RSHFT J  &mt RCTRL K  &mt RALT L   &mt RGUI DE_PLUS
-   &kp LS(Y))	&mt LC(LSHFT) X          &kp C              &kp V            &kp B   &kp N  &kp M              &kp DE_COMMA 	    &mt LC(LSHFT) DE_DOT  &kp DE_MINUS 	        
-                   &lt 3 ESC &lt 2 TAB &lt 1 SPACE        &lt 3 ENTER &lt 2 BSPC &lt 1 DEL
+   &kp LS(Y) &mt LS(LCTL) X &kp C              &kp V            &kp B   &kp N  &kp M              &kp DE_COMMA &mt LC(LSFT) DE_DOT &kp DE_MINUS
+                   &lt 3 ESC &lt 2 TAB &lt 1 SPACE &lt 3 ENTER &lt 2 BSPC &lt 1 DEL
                         >;
                 };
                 symbolNav_layer {
