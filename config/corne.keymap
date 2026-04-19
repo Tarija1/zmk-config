@@ -11,8 +11,6 @@
 #include "keys_de.h"
 
 / {
-
-{
      behaviors {
         // Für Shift (F/J): Schnell (130ms)
         hm_fast: homerow_mods_fast {
@@ -93,7 +91,6 @@
 	&mt LSFT Y   	&mt LC(LSFT) X  &kp C     	&kp V        		&kp B   &kp N       &kp M        		&kp DE_COMMA 	&mt LC(LSFT) DE_DOT &kp DE_MINUS
 					&lt 3 ESCAPE  &lt 2 TAB  &lt 1 SPACE            		&lt 3 ENTER  &lt 2 BACKSPACE  &lt 1 DELETE
             >;
-                        >;
                 };
                 symbolNav_layer {
                         bindings = <
