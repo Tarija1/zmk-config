@@ -11,6 +11,72 @@
 #include "keys_de.h"
 
 / {
+
+{
+     behaviors {
+        // Für Shift (F/J): Schnell (130ms)
+        hm_fast: homerow_mods_fast {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <130>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Standard Homerow Mods (D/S/K/L): Dein Standard (200ms)
+        hm: homerow_mods_std {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Für GUI (A/Plus): Langsam (700ms)
+        hm_slow: homerow_mods_slow {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <700>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        // Timeout: Wie schnell hintereinander gedrückt werden muss (ms)
+        timeout-ms = <50>; 
+
+        combo_caps {
+            timeout-ms = <50>;
+            key-positions = <13 16>; // F und J
+            bindings = <&kp CAPS>;
+        };
+
+        combo_space {
+            key-positions = <16 17>; // J und K
+            bindings = <&kp SPACE>;
+        };
+
+        combo_enter {
+            key-positions = <12 13>; // D und F
+            bindings = <&kp ENTER>;
+        };
+
+        combo_redo {
+            key-positions = <11 12>; // S und D
+            bindings = <&kp LC(Y)>;
+        };
+
+        combo_undo {
+            key-positions = <1 2>;   // W und E
+            bindings = <&kp LC(Z)>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -21,10 +87,15 @@
 // | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp Q                &kp W          &kp E              &kp R 			 &kp T   &kp Z  &kp U  			   &kp I     	       	&kp O   	               &kp P
-   &mt LGUI A   &mt LALT S   &mt LCTRL D  &mt LSHFT F  &kp G           &kp H        &mt RSHFT J  &mt RCTRL K  &mt RALT L   &mt RGUI DE_PLUS
-   &kp LS(Y) &mt LS(LCTL) X &kp C              &kp V            &kp B   &kp N  &kp M              &kp DE_COMMA &mt LC(LSFT) DE_DOT &kp DE_MINUS
-                   &lt 3 ESC &lt 2 TAB &lt 1 SPACE &lt 3 ENTER &lt 2 BSPC &lt 1 DEL
+  // Reihe 0
+&kp Q        &kp W        &kp E        &kp R        &kp T           &kp Z        &kp U        &kp I        &kp O        &kp P
+// Reihe 1 (Anwendung der verschiedenen Geschwindigkeiten)
+&hm_slow LGUI A &hm LALT S &hm LCTRL D &hm_fast LSHFT F &kp G       &kp H &hm_fast RSHFT J &hm RCTRL K &hm RALT L &hm_slow RGUI DE_PLUS
+// Reihe 2
+&mt LSFT Y   &mt LC(LSFT) X  &kp C     &kp V        &kp B           &kp N        &kp M        &kp DE_COMMA &mt LC(LSFT) DE_DOT &kp DE_MINUS
+// Daumen (Bleiben bei Standard 200ms &lt)
+                 &lt 3 ESCAPE  &lt 2 TAB  &lt 1 SPACE            &lt 3 ENTER  &lt 2 BACKSPACE  &lt 1 DELETE
+            >;
                         >;
                 };
                 symbolNav_layer {
