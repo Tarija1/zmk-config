@@ -88,13 +88,10 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
   // Reihe 0
-&kp Q        &kp W        &kp E        &kp R        &kp T           &kp Z        &kp U        &kp I        &kp O        &kp P
-// Reihe 1 (Anwendung der verschiedenen Geschwindigkeiten)
-&hm_slow LGUI A &hm LALT S &hm LCTRL D &hm_fast LSHFT F &kp G       &kp H &hm_fast RSHFT J &hm RCTRL K &hm RALT L &hm_slow RGUI DE_PLUS
-// Reihe 2
-&mt LSFT Y   &mt LC(LSFT) X  &kp C     &kp V        &kp B           &kp N        &kp M        &kp DE_COMMA &mt LC(LSFT) DE_DOT &kp DE_MINUS
-// Daumen (Bleiben bei Standard 200ms &lt)
-                 &lt 3 ESCAPE  &lt 2 TAB  &lt 1 SPACE            &lt 3 ENTER  &lt 2 BACKSPACE  &lt 1 DELETE
+	&kp Q        	&kp W        	&kp E       &kp R        		&kp T   &kp Z       &kp U        		&kp I        	&kp O        		&kp P
+	&hm_slow LGUI A &hm LALT S 		&hm LCTRL D &hm_fast LSHFT F 	&kp G   &kp H 		&hm_fast RSHFT J 	&hm RCTRL K 	&hm RALT L 			&hm_slow RGUI DE_PLUS
+	&mt LSFT Y   	&mt LC(LSFT) X  &kp C     	&kp V        		&kp B   &kp N       &kp M        		&kp DE_COMMA 	&mt LC(LSFT) DE_DOT &kp DE_MINUS
+					&lt 3 ESCAPE  &lt 2 TAB  &lt 1 SPACE            		&lt 3 ENTER  &lt 2 BACKSPACE  &lt 1 DELETE
             >;
                         >;
                 };
