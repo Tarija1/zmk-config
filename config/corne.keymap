@@ -96,7 +96,7 @@
                         bindings = <
    &kp PAGE_UP 	&kp LC(LEFT)	&kp UP 		&kp LC(RIGHT) 	&kp DE_LT   	&kp DE_BSLH   &kp DE_LBKT &kp DE_RBKT   &kp DE_AT 		&kp DE_DLLR 
    &kp PAGE_DOWN &kp LEFT 		&kp DOWN 	&kp RIGHT 		&kp DE_GT 		&kp DE_DQT    &kp DE_LPAR &kp DE_RPAR 	&kp DE_EXCL 	&kp DE_EQUAL 	
-   &bt BT_SEL 0       	&kp HOME 		&kp INSERT 	&kp END 		&kp DE_ACUTE    &kp DE_APOS   &kp DE_LBRC &kp DE_RBRC  	&kp DE_POUND    &kp DE_AMPS 
+   &trans      	&kp HOME 		&kp INSERT 	&kp END 		&kp DE_ACUTE    &kp DE_APOS   &kp DE_LBRC &kp DE_RBRC  	&kp DE_POUND    &kp DE_AMPS 
                                     &trans     &trans       &trans      &kp DE_FSLH  	&kp DE_STAR   &kp DE_QMARK
                         >;
                 };
