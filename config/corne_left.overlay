@@ -6,6 +6,9 @@
 
 #include "corne.dtsi"
 
+&five_column_transform {
+    col-offset = <0>;
+};
 
 &kscan0 {
 

@@ -12,8 +12,4 @@
         diode-direction = "col2row";
     };
 	
-	&five_column_transform {
-    col-offset = <0>;
-};
-	
 };
