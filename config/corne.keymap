@@ -43,37 +43,35 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-        // Timeout: Wie schnell hintereinander gedrückt werden muss (ms)
-        timeout-ms = <50>; 
+combos {
+    compatible = "zmk,combos";
+    timeout-ms = <50>;
 
-        combo_caps {
-            timeout-ms = <50>;
-            key-positions = <13 16>; // F und J
-            bindings = <&kp CAPS>;
-        };
-
-        combo_space {
-            key-positions = <16 17>; // J und K
-            bindings = <&kp SPACE>;
-        };
-
-        combo_enter {
-            key-positions = <12 13>; // D und F
-            bindings = <&kp ENTER>;
-        };
-
-        combo_redo {
-            key-positions = <11 12>; // S und D
-            bindings = <&kp LC(Y)>;
-        };
-
-        combo_undo {
-            key-positions = <1 2>;   // W und E
-            bindings = <&kp LC(Z)>;
-        };
+    combo_caps {
+        key-positions = <8 13>;
+        bindings = <&kp CAPS>;
     };
+
+    combo_space {
+        key-positions = <13 14>;
+        bindings = <&kp SPACE>;
+    };
+
+    combo_enter {
+        key-positions = <7 8>;
+        bindings = <&kp ENTER>;
+    };
+
+    combo_redo {
+        key-positions = <6 7>;
+        bindings = <&kp LC(Y)>;
+    };
+
+    combo_undo {
+        key-positions = <1 2>;
+        bindings = <&kp LC(Z)>;
+    };
+};
 
         keymap {
                 compatible = "zmk,keymap";
