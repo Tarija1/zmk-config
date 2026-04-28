@@ -22,5 +22,4 @@ col-gpios
     , <&pro_micro 14 GPIO_ACTIVE_HIGH>  // col 3
     , <&pro_micro 15 GPIO_ACTIVE_HIGH>  // col 4
 ;
-				
 };
