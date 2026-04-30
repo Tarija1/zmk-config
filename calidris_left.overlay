@@ -1,0 +1,5 @@
+// Updated GPIO pin mappings for nice_nano_v2
+const struct pin_mapping { 
+    pin_t row_gpios[] = {<&gpio0 31>, <&gpio0 30>, <&gpio0 28>, <&gpio0 4>};
+    pin_t col_gpios[] = {<&gpio0 6>, <&gpio0 7>, <&gpio0 8>, <&gpio0 5>, <&gpio1 9>};
+};

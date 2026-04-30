@@ -1,0 +1,15 @@
+// Updated GPIO configurations for nRF52840
+
+#define ROW_GP
+#define COL_GP
+
+&gpio0 {
+    row-gpios = <4>, <30>, <31>, <28>;
+    col-gpios = <6>, <7>, <8>, <5>;
+};
+
+&gpio1 {
+    col-gpios = <9>;
+};
+
+col-offset = <5>;
