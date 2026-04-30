@@ -1,7 +1,13 @@
-#include <layouts.dtsi>
+#include <dt-bindings/zmk/matrix_transform.h>
 
 / {
     chosen {
-        zmk,physical-layout = &foostan_corne_5col_layout;
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
+        diode-direction = "col2row";
     };
 };
