@@ -6,4 +6,3 @@ config SHIELD_CALIDRIS_LEFT
 
 config SHIELD_CALIDRIS_RIGHT
     def_bool $(shields_list_contains,calidris_right)
-corne
