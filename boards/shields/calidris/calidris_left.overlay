@@ -1,19 +1,18 @@
-#include "calidris.dtsi"
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
 
-/* LEFT kscan override */
+#include "corne.dtsi"
+
 &kscan0 {
-    row-gpios
-		= <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&gpio0 30 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		;
-
-	col-gpios
-		= <&gpio0 6 GPIO_ACTIVE_HIGH>
-		, <&gpio0 7 GPIO_ACTIVE_HIGH>
-		, <&gpio0 8 GPIO_ACTIVE_HIGH>
-		, <&gpio0 5 GPIO_ACTIVE_HIGH>
-		, <&gpio1 9 GPIO_ACTIVE_HIGH>
-		;
+    col-gpios
+        = <&pro_micro 21 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 20 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+        ;
 };
